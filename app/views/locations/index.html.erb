@@ -1,0 +1,11 @@
+<h1>All locations</h1>
+<ul>
+<% @locations.each do |location| %>
+<li>
+  <img src="<%= location.image %>"><br />
+  <%= location.name %><br />
+  <%= location.address %><br />
+  <%= location.description %><br />
+</li>
+<% end %>
+</ul>
