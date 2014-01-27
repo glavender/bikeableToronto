@@ -3,7 +3,7 @@
 <% @locations.each do |location| %>
 <li>
   <img src="<%= location.image %>"><br />
-  <%= location.name %><br />
+  <%= link_to location.name, location_path(location) %><br />
   <%= location.address %><br />
   <%= location.description %><br />
 </li>
