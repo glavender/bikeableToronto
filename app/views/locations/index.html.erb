@@ -58,17 +58,25 @@ function handleNoGeolocation(errorFlag) {
 
 
     </script>
-<% @title="Bikeable Toronto" %>
 
-<h1>All locations</h1>
-<ul>
-<% @locations.each do |location| %>
-<li>
-  <img src="<%= location.image %>"><br />
-  <%= link_to location.name, location_path(location) %><br />
-  <%= location.address %><br />
-  <%= location.description %><br />
-</li>
-<% end %>
-</ul>
-<div id="map-canvas"/>
+
+
+  <div class="row">
+  <div class="large-2 columns">
+    <h1>All locations</h1>
+    <ul>
+      <% @locations.each do |location| %>
+        <li>
+          <img src="<%= location.image %>"><br />
+          <%= link_to location.name, location_path(location) %><br />
+          <%= location.address %><br />
+          <%= location.description %><br />
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="large-10 columns">
+    <div id="map-canvas" style="width:800px; height:700px"/>
+  </div>
+</div>
