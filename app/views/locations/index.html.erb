@@ -63,20 +63,19 @@ function handleNoGeolocation(errorFlag) {
 
   <div class="row">
   <div class="large-2 columns">
-    <h1>All locations</h1>
+    <h3>All locations</h3>
     <ul>
       <% @locations.each do |location| %>
         <li>
           <img src="<%= location.image %>"><br />
           <%= link_to location.name, location_path(location) %><br />
           <%= location.address %><br />
-          <%= location.description %><br />
         </li>
       <% end %>
     </ul>
   </div>
 
   <div class="large-10 columns">
-    <div id="map-canvas" style="width:800px; height:700px;"/>
+    <div id="map-canvas" style="width:100%; height:800px;"/>
   </div>
 </div>
